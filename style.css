@@ -1,0 +1,117 @@
+/* Add your styles here */
+
+
+.calculator {
+    width: 310px;
+    margin: auto;
+    text-align: center;   
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    align-items: center;
+    background: linear-gradient(90deg, #eb92be, #ffef78, #63c9b4);
+    display: flex;
+    font-family: "Dosis", sans-serif;
+    font-display: swap;
+    height:100vh;
+    justify-content: center;  
+}
+
+.screen {
+    width: 240px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 2em;
+    border-radius: 15px;
+    background-color: #ffffffd3;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    font-size: 1.2em;
+    
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.5);
+    color: #232323;
+    flex-basis: 0%;
+    font-family: inherit;
+    font-size: 28px;
+    height: 65px;  
+    
+}
+
+button:last-child{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background: #d72880;
+    cursor: pointer;
+    
+}
+
+button.operator{
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+    color: #fff;
+    background: #d72828cc;
+    cursor: pointer;
+}
+
+button:last-child:hover{
+    background-color: inherit;
+    color: inherit;
+}
+
+button:hover{
+    background-color: inherit;
+}
+
+button:active{
+    background-color: #ffef78;
+}
+
+.double{
+    flex-basis: 47%;
+}
+
+/* Define a keyframe animation for the glowing effect */
+@keyframes glowing {
+    0% {
+        text-shadow: 0 0 5px #00ff22, 0 0 10px #00ff15, 0 0 20px #00ff00;
+    }
+    50% {
+        text-shadow: 0 0 10px #0004ff, 0 0 20px #0026ff, 0 0 30px #002fff;
+    }
+    100% {
+        text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+    }
+}
+
+/* Apply the animation to the text inside the elements with the 'head' class */
+.head {
+    animation: glowing 1.5s infinite;
+    color: #fff; /* Text color */
+}
+
